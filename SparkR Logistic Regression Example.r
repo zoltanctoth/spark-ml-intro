@@ -30,4 +30,4 @@ predicted.data <- predict(model, test)
 printSchema(predicted.data)
 predicted.data$features <- NULL
 
-SparkR::write.df(predicted.data, file.path(data.dir,"r_out.json"), "json")
+SparkR::write.df(predicted.data, file.path(data.dir,"prediction.json"), "json")
